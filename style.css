@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-display: swap;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    overflow: hidden;
+}
+.display{
+    width: 18.5rem;
+    height: 6.25rem;
+    background: #232323;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#word{
+    font-size: 1.625rem;
+    color: #f0eff8;
+    font-weight: 600;
+    text-align: center;
+}
+.container{
+    display: grid;
+    gap: 1.35rem;
+}
+.choice{
+    height: 5rem;
+    width: 20rem;
+    border: 0.0625rem solid #454545;
+    border-radius: 0.5rem;
+    background: #afafaf;
+}
+.choicetext{
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+}
+#word, .choicetext{
+    word-wrap: normal;
+}
+.none{
+    display: none;
+}
+section:has(.selector){
+    position: relative;
+}
+.selector{
+    width: 12.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.25rem;
+    border: 1px solid black
+}
+.selector, i{
+    font-size: 1rem;
+}
+i{
+    position: absolute;
+    top: 1.75rem;
+    right: 1.25rem;
+    transform: translateY(-50%);
+}
+.menu{
+    width: 12.5rem;
+    display: grid;
+    gap: 0.25rem;
+    background: rgb(235, 235, 235);
+    border-bottom-left-radius: 0.125rem;
+    border-bottom-right-radius: 0.125rem;
+    border: 1px solid black;
+    border-top: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 120ms ease-out, transform 120ms ease-out;
+    z-index: 1111;
+}
+.select{
+    height: 3.5rem;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu.active{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+#start{
+    position: absolute;
+    left: 50%;
+    top: 62.5%;
+    translate: -50% -50%;
+    font-size: 1rem;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 0.125rem;
+    border: 1px solid black;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 11;
+}
+.menu.active + #start{
+    z-index: -11;
+}
+.no-click{
+    pointer-events: none;
+}
