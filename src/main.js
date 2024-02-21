@@ -25,12 +25,12 @@ selector.closest('section').addEventListener('click', event => {
             break;
     }
 });
+// Select Between Words or Phrases
 document.getElementById('start').addEventListener('click', e => {
     if(selector.innerText != 'Select Topic'){
         switch(selector.innerText){
             case 'Phrases':
                 GetData('/src/phrase.json');
-                // word.innerText = 
                 break;
             case 'Words':
                 GetData('/src/word.json');
