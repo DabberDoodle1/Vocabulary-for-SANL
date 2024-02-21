@@ -25,6 +25,7 @@ selector.closest('section').addEventListener('click', event => {
             break;
     }
 });
+
 // Select Between Words or Phrases
 document.getElementById('start').addEventListener('click', e => {
     if(selector.innerText != 'Select Topic'){
